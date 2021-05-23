@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./pages/home/home.component";
 import { HomeJugadorComponent } from "./pages/Jugador-pages/home-jugador/home-jugador.component";
-import { JugadorBasicComponentComponent } from "./pages/Jugador-pages/jugador-basic-component/jugador-basic-component.component";
+import { JugarComponent } from "./pages/Jugador-pages/jugar/jugar.component";
 
 const routes: Routes = [
   {
@@ -10,20 +10,22 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: "user",
-    component: JugadorBasicComponentComponent,
+    path: "userhome",
+    component: HomeJugadorComponent,
     children: [
       {
-        path: "userhome",
-        component: HomeJugadorComponent,
+        path: "jugar",
+        component: JugarComponent,
       },
       {
-        path: "user",
-        redirectTo: "userhome",
+        path: "",
+        redirectTo: "jugar",
         pathMatch: "full",
       },
     ],
   },
+
+  { path: "**", redirectTo: "home" },
   {
     path: "",
     redirectTo: "home",
