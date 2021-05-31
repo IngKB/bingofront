@@ -1,4 +1,4 @@
 export class Coordenada{
-  posX:number;
-  posY:number;
+
+  constructor(public posX:number,public posY:number){}
 }

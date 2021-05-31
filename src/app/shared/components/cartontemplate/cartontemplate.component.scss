@@ -1,0 +1,39 @@
+.bingo{
+  background-color:var(--morado);
+  width: 175px;
+  border: 2px solid var(--moradoOscuro);
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+
+  .letra{
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    width: 34px;
+    display: inline-block;
+  }
+
+}
+
+.casilla{
+  border-bottom: 2px solid var(--moradoOscuro);
+  border-left: 2px solid var(--moradoOscuro);
+  padding: 0px 2px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  width: 35px;
+  background-color: white;
+
+}
+.columna{
+  display: inline-block;
+}
+.columna-final .casilla{
+  border-right: 2px solid var(--moradoOscuro);
+}
+.selected{
+  background-color: red;
+}

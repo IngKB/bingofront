@@ -1,0 +1,16 @@
+.carton{
+  display: inline-block;
+  margin: 20px;
+}
+
+.comprar{
+  background-color: var(--amarillo);
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.generar{
+  background-color: var(--morado);
+  color:white;
+  border-radius: 30px;
+}

@@ -1,0 +1,15 @@
+<div class="bingo">
+  <div class="letra">B</div>
+  <div class="letra">I</div>
+  <div class="letra">N</div>
+  <div class="letra">G</div>
+  <div class="letra">O</div>
+</div>
+<div class="contenido">
+  <div *ngFor="let a of indice; let i= index" class="columna">
+    <div *ngFor="let casil of getColumna(i)" class="casilla" [ngClass]="{'selected':casil.Marcado}">{{casil.Numero}}</div>
+  </div>
+  <div class="columna columna-final">
+    <div *ngFor="let casil of getColumna(4)" class="casilla" [ngClass]="{'selected':casil.Marcado}">{{casil.Numero}}</div>
+  </div>
+</div>

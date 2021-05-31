@@ -7,7 +7,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './shared/components/nav-menu/nav-menu.component';
 import { HomeComponent } from './pages/home/home.component';
-import { FetchDataComponent } from './pages/fetch-data/fetch-data.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,20 +17,25 @@ import { LoginDialogComponent } from './pages/login-dialog/login-dialog.componen
 import { JugarComponent } from './pages/Jugador-pages/jugar/jugar.component';
 import { ProximoEventoComponent } from './shared/components/proximo-evento/proximo-evento.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { CartonesComponent } from './pages/Jugador-pages/cartones/cartones.component';
+import { CartontemplateComponent } from './shared/components/cartontemplate/cartontemplate.component';
+import { JuegoPrincipalComponent } from './pages/Jugador-pages/juego-principal/juego-principal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    FetchDataComponent,
     ToolbarComponent,
     RegisterDialogComponent,
     HomeJugadorComponent,
     LoginDialogComponent,
     JugarComponent,
     ProximoEventoComponent,
-    FooterComponent
+    FooterComponent,
+    CartonesComponent,
+    CartontemplateComponent,
+    JuegoPrincipalComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

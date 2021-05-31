@@ -4,3 +4,8 @@ mat-dialog-container.mat-dialog-container{
 mat-card{
   padding: 24px;
 }
+:root{
+  --amarillo:#FFE523;
+  --moradoOscuro: rgb(56, 1, 107);
+  --morado: rgb(51, 61, 214);
+}

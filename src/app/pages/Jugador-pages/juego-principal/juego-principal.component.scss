@@ -1,0 +1,29 @@
+.contenedor{
+  height: 100%;
+  width: 100%;
+  background-image: url(../../../../assets/fondobarras.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: #4101D4;
+  padding: 10px;
+}
+
+.tablero{
+  border-radius: 30px;
+  border: 2px solid black;
+  background-color: rgba(25, 10, 56, 0.75);
+
+}
+.balotas{
+  border-radius: 30px;
+  border: 2px solid black;
+  background-color: rgba(25, 10, 56, 0.75);
+}
+
+.cartones{
+  border-radius: 30px;
+  border: 2px solid black;
+  background-color: rgba(25, 10, 56, 0.75);
+  margin-top: 20px;
+  padding: 20px;
+}
