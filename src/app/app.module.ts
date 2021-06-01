@@ -20,6 +20,9 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { CartonesComponent } from './pages/Jugador-pages/cartones/cartones.component';
 import { CartontemplateComponent } from './shared/components/cartontemplate/cartontemplate.component';
 import { JuegoPrincipalComponent } from './pages/Jugador-pages/juego-principal/juego-principal.component';
+import { AdminLoginComponent } from './pages/Admin-pages/admin-login/admin-login.component';
+import { AdminHomeComponent } from './pages/Admin-pages/admin-home/admin-home.component';
+import { AdminJuegoComponent } from './pages/Admin-pages/admin-juego/admin-juego.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { JuegoPrincipalComponent } from './pages/Jugador-pages/juego-principal/j
     CartonesComponent,
     CartontemplateComponent,
     JuegoPrincipalComponent,
+    AdminLoginComponent,
+    AdminHomeComponent,
+    AdminJuegoComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

@@ -7,5 +7,6 @@ mat-card{
 :root{
   --amarillo:#FFE523;
   --moradoOscuro: rgb(56, 1, 107);
-  --morado: rgb(51, 61, 214);
+  --azul: rgb(51, 61, 214);
+  --azulclaro: rgb(136, 142, 231);
 }
