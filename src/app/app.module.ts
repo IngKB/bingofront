@@ -23,6 +23,7 @@ import { JuegoPrincipalComponent } from './pages/Jugador-pages/juego-principal/j
 import { AdminLoginComponent } from './pages/Admin-pages/admin-login/admin-login.component';
 import { AdminHomeComponent } from './pages/Admin-pages/admin-home/admin-home.component';
 import { AdminJuegoComponent } from './pages/Admin-pages/admin-juego/admin-juego.component';
+import { TableroComponent } from './shared/components/tablero/tablero.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { AdminJuegoComponent } from './pages/Admin-pages/admin-juego/admin-juego
     AdminLoginComponent,
     AdminHomeComponent,
     AdminJuegoComponent,
+    TableroComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
