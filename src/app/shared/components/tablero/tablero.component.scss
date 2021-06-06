@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.fondo{
+  background-color: rgba(77, 46, 139, 0.75);
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 100%;
+  width: 230px;
+  padding: 2px;
+}
+
+.columna{
+  display: inline-block;
+}
+
+.casilla, .letraTitulo{
+  position: relative;
+  width: 32px;
+  height: 32px;
+  padding-top: 5px;
+  border-radius: 30px;
+  text-align: center;
+  margin: 3px 5px;
+}
+.letraTitulo{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px black ;
+}
+.casilla{
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid black;
+}
+.luz{
+  position: absolute;
+  z-index: 1;
+  width: 22px;
+  height: 22px;
+  border-radius: 20px;
+  right: 2px;
+  top: 1px;
+}
+.numero{
+  position: absolute;
+  color: black;
+  z-index: 9;
+  right: 5px;
+  top: 1px;
+}
+.B{
+  background-color: hsl(251, 66%, 33%);
+  .luz{
+    background-color: hsl(251, 66%, 60%);
+  }
+}
+.I{
+  background-color: hsl(61, 59%, 26%);
+  .luz{
+    background-color: hsl(61, 59%, 60%);
+  }
+}
+.N{
+  background-color: hsl(0, 59%, 26%);
+  .luz{
+    background-color: hsl(0, 59%, 60%);
+  }
+}
+.G{
+  background-color: hsl(184, 59%, 26%);
+  .luz{
+    background-color: hsl(184, 59%, 60%);
+  }
+}
+.O{
+  background-color: hsl(120, 59%, 26%);
+  .luz{
+    background-color: hsl(120, 59%, 60%);
+  }
+}
+
+.letraB{
+  color: hsl(251, 66%, 60%);
+}
+.letraI{
+  color: hsl(61, 59%, 60%);
+}
+.letraN{
+  color: hsl(0, 59%, 60%);
+}
+.letraG{
+  color: hsl(184, 59%, 60%);
+}
+.letraO{
+  color: hsl(120, 59%, 60%);
+}

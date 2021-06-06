@@ -5,12 +5,12 @@ import { Coordenada } from '../../models/coordenada.vo';
 @Component({
   selector: 'app-tablero',
   templateUrl: './tablero.component.html',
-  styleUrls: ['./tablero.component.css']
+  styleUrls: ['./tablero.component.scss']
 })
 export class TableroComponent implements OnInit {
 
   B:Casilla[]=[];
-  indice = [0,1,2,3,4];
+  indice = ['B','I','N','G','O'];
 
   constructor() { }
 

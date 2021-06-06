@@ -1,5 +1,11 @@
 <div class="fondo">
-  <div *ngFor="let a of indice; let i= index" class="columna">
-    <div *ngFor="let casil of getFila(i)" class="casilla" [ngClass]="{'selected':casil.Marcado}">{{casil.Numero}}</div>
+  <div *ngFor="let letra of indice; let i= index" class="columna">
+    <div class="letra{{letra}} letraTitulo">{{letra}}</div>
+    <div *ngFor="let casil of getFila(i)" class="casilla {{letra}}" [ngClass]="{'selected':casil.marcado}">
+      <div class="luz"></div>
+      <span class="numero">
+        {{casil.numero}}
+      </span>
+    </div>
   </div>
 </div>

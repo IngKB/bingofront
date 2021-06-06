@@ -1,4 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { CartonService } from 'src/app/services/carton.service';
+import { EventoBingoService } from 'src/app/services/evento-bingo.service';
+import { LoginService } from 'src/app/services/login.service';
 import { CartontemplateComponent } from 'src/app/shared/components/cartontemplate/cartontemplate.component';
 import { Carton } from 'src/app/shared/models/carton.Entity';
 
@@ -16,19 +20,46 @@ export class CartonesComponent implements OnInit {
   carton1:Carton;
   carton2:Carton;
   carton3:Carton;
-  constructor() { }
+  eventoId:number;
+  jugadorId:string;
+  constructor(
+    public router:Router,
+    public cartonService:CartonService,
+    public eventoService:EventoBingoService,
+    public loginService:LoginService) { }
 
   ngOnInit() {
-    this.generarCartones();
+    this.obtenerDatos();
+  }
+
+  obtenerDatos(){
+    this.jugadorId = this.loginService.getItem("Id");
+    this.eventoService.getEventos().subscribe(
+      value=>{
+        if(value.estado == 0) {
+          this.eventoId = value.evento.id;
+          console.log(this.eventoId);
+          this.generarCartones();
+        };
+      }
+    );
   }
 
   generarCartones(){
-
-    this.carton1 = new Carton('123');
-    this.carton2 = new Carton('125');
-    this.carton3 = new Carton('126');
+    this.carton1 = new Carton(this.jugadorId,this.eventoId);
+    this.carton2 = new Carton(this.jugadorId,this.eventoId);
+    this.carton3 = new Carton(this.jugadorId,this.eventoId);
     this.cartonTemp1.generarNuevo(this.carton1);
     this.cartonTemp2.generarNuevo(this.carton2);
     this.cartonTemp3.generarNuevo(this.carton3);
   }
+
+  comprarCartones(){
+    this.cartonService.comprarCarton(this.carton1).subscribe(_=>
+    this.cartonService.comprarCarton(this.carton2).subscribe(_=>
+    this.cartonService.comprarCarton(this.carton3).subscribe()));
+
+    this.router.navigateByUrl("/userhome");
+  }
+
 }

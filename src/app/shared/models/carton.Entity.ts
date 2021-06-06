@@ -2,16 +2,18 @@ import { Casilla } from "./casilla.vo";
 import { Coordenada } from "./coordenada.vo";
 
 export class Carton{
-  Casillas:Casilla[];
+  casillas:Casilla[];
   JugadorId:string;
+  EventoId:number;
 
-  constructor(jugadorId:string){
+  constructor(jugadorId:string, evento:number, casillas?:Casilla[]){
+    this.EventoId = evento;
     this.JugadorId = jugadorId;
     this.GenerarCasillas();
   }
 
   private GenerarCasillas(){
-    this.Casillas = [];
+    this.casillas = [];
     let cont = 0;
     let max = 15;
     let min = 0;
@@ -36,7 +38,7 @@ export class Carton{
         if(i==2 && j==2){
           num = 0;
         }
-        this.Casillas[cont] = new Casilla(num,false,new Coordenada(i,j));
+        this.casillas[cont] = new Casilla(num,false,new Coordenada(i,j));
         cont++;
       }
       max += 15;

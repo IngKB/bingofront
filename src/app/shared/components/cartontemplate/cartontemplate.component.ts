@@ -14,15 +14,14 @@ export class CartontemplateComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
-    this.carton = new Carton('123');
+    this.carton = new Carton(' ',0);
   }
 
   marcarNumero(numero:number){
-    if(this.carton){
-      this.carton.Casillas.forEach(casilla => {
-        if(casilla.Numero==numero){
-          casilla.Marcado = true;
+    if(this.carton && this.carton.casillas){
+      this.carton.casillas.forEach(casilla => {
+        if(casilla.numero==numero){
+          casilla.marcado = true;
         }
       });
     }
@@ -33,8 +32,11 @@ export class CartontemplateComponent implements OnInit {
   }
 
   getColumna(column:number):Casilla[]{
+
     if(this.carton){
-      return this.carton.Casillas.filter((casilla)=>casilla.coordenada.posX == column);
+      return this.carton.casillas.filter((casilla)=>casilla.coordenada.posX == column);
+    }else{
+      console.log("get column nul");
     }
     return [];
   }

@@ -7,9 +7,9 @@
 </div>
 <div class="contenido">
   <div *ngFor="let a of indice; let i= index" class="columna">
-    <div *ngFor="let casil of getColumna(i)" class="casilla" [ngClass]="{'selected':casil.Marcado}">{{casil.Numero}}</div>
+    <div *ngFor="let casil of getColumna(i)" class="casilla" [ngClass]="{'selected':casil.marcado}">{{casil.numero}}</div>
   </div>
   <div class="columna columna-final">
-    <div *ngFor="let casil of getColumna(4)" class="casilla" [ngClass]="{'selected':casil.Marcado}">{{casil.Numero}}</div>
+    <div *ngFor="let casil of getColumna(4)" class="casilla" [ngClass]="{'selected':casil.marcado}">{{casil.numero}}</div>
   </div>
 </div>
