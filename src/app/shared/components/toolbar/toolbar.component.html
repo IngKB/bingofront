@@ -1,7 +1,7 @@
 <mat-toolbar>
   <div class="filler"></div>
   <div *ngIf="!logged">
-    <span class="letrasBlancas" (click)="openDialogRegister()">
+    <span class="letrasBlancas" (click)="openDialogRegister()" id="btnRegistrarse">
       Registrarse</span>
     <button mat-raised-button (click)="openDialogLogin()">
       Iniciar sesión
