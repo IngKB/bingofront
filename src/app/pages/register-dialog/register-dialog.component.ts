@@ -47,7 +47,7 @@ export class RegisterDialogComponent {
     this.jugadorService.create(jugador,user).subscribe(value=>{
       if(value.estado==0){
         this.loginService.saveUser(jugador);
-        this.router.navigateByUrl('user/userhome');
+        this.router.navigateByUrl('userhome');
         this.dialogRef.close();
       }
     });

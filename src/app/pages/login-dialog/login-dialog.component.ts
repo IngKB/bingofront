@@ -29,7 +29,7 @@ export class LoginDialogComponent implements OnInit {
     this.loginService.login(user).subscribe(value=>{
 
       if(value.estado==0){
-        this.router.navigateByUrl('user/userhome');
+        this.router.navigateByUrl('userhome');
         this.dialogRef.close();
       }
     }
