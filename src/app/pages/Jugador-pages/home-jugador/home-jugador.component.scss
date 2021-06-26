@@ -18,13 +18,18 @@
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-  background-image: url(../../../../assets/ball1.png);
   background-repeat: no-repeat;
   background-size: clamp(10px,20%,45px);
   background-position: 5% 50%;
 }
 .btn:hover{
   background-color: rgba(42, 12, 100, 0.75);
+}
+.btn1{
+  background-image: url(../../../../assets/ball1.png);
+}
+.btn2{
+  background-image: url(../../../../assets/ball2.png);
 }
 
 

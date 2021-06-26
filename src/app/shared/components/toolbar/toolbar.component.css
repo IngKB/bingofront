@@ -2,9 +2,16 @@
   height: 60px;
 }
 
+.logo{
+  margin-top: 10px;
+  color: white;
+  font-size: 25px;
+}
 .mat-toolbar{
   background-color:#190A38;
   padding: 10px 10px;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  cursor: pointer;
 }
 
 .filler {
