@@ -12,9 +12,9 @@
             Digite un numero para jugar
           </mat-card-title>
           <mat-form-field class="example-full-width" appearance="fill">
-            <input matInput placeholder="60" value="" type="number">
+            <input matInput placeholder="60" value="" type="number" [(ngModel)]="numeroInput">
           </mat-form-field>
-          <button mat-raised-button color="primary" class="mar"> jugar </button>
+          <button mat-raised-button color="primary" class="mar" (click)="marcarNumero()"> jugar </button>
         </mat-card>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Casilla } from '../../models/casilla.vo';
 import { Coordenada } from '../../models/coordenada.vo';
 
@@ -29,5 +29,13 @@ export class TableroComponent implements OnInit {
 
   getFila(column:number):Casilla[]{
     return this.B.filter((casilla)=>casilla.coordenada.posX == column);
+  }
+
+  marcarNumero(numero:number){
+    this.B.forEach(element => {
+        if(element.numero==numero){
+          element.marcado =true;
+        }
+    });
   }
 }

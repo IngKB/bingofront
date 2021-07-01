@@ -96,3 +96,10 @@
 .letraO{
   color: hsl(120, 59%, 60%);
 }
+
+.selected{
+  background-color: rgb(155, 148, 148);
+  .luz{
+    background-color: rgb(204, 201, 201);
+  }
+}

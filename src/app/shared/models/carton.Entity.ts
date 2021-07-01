@@ -12,6 +12,8 @@ export class Carton{
     this.GenerarCasillas();
   }
 
+
+
   private GenerarCasillas(){
     this.casillas = [];
     let cont = 0;

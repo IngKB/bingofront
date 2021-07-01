@@ -6,6 +6,7 @@ import { LoginService } from 'src/app/services/login.service';
 import { CartontemplateComponent } from 'src/app/shared/components/cartontemplate/cartontemplate.component';
 import { Carton } from 'src/app/shared/models/carton.Entity';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { ConfirmarDialogComponent } from '../confirmar-dialog/confirmar-dialog.component';
 
 @Component({
   selector: 'app-cartones',
@@ -24,6 +25,7 @@ export class CartonesComponent implements OnInit {
   eventoId:number;
   jugadorId:string;
   constructor(
+    public dialog:MatDialog,
     public router:Router,
     public cartonService:CartonService,
     public eventoService:EventoBingoService,
@@ -58,9 +60,15 @@ export class CartonesComponent implements OnInit {
   comprarCartones(){
     this.cartonService.comprarCarton(this.carton1).subscribe(_=>
     this.cartonService.comprarCarton(this.carton2).subscribe(_=>
-    this.cartonService.comprarCarton(this.carton3).subscribe()));
+    this.cartonService.comprarCarton(this.carton3).subscribe(_=>{
 
-    this.router.navigateByUrl("/userhome");
+      const dialogref = this.dialog.open(ConfirmarDialogComponent,{});
+      dialogref.afterClosed().subscribe(res=>{
+        this.router.navigateByUrl("/userhome");
+      })
+    }
+    )));
+
   }
 
 }
