@@ -1,3 +1,15 @@
+.content{
+  display: flex;
+  flex-flow: column;
+  height: 83%;
+  flex: 1 1 auto;
+  background-image: url(../../../../assets/fondobarras.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: #4101D4;
+}
+
+
 .example-container {
   position: relative;
   height: 90%;

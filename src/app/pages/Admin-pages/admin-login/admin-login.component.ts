@@ -28,7 +28,7 @@ export class AdminLoginComponent implements OnInit {
     this.loginService.login(user).subscribe(value=>{
 
       if(value.estado==0){
-        this.router.navigateByUrl('user/userhome');
+        this.router.navigateByUrl('admin/home/juego');
       }
     }
     );
