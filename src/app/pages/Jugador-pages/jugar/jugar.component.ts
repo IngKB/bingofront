@@ -24,8 +24,9 @@ export class JugarComponent implements OnInit {
     const id = this.loginService.getItem('Id');
     this.eventoService.getEventos().subscribe(val=>{
       if(val.estado==0){
-
-        console.log(val.evento);
+       if(val.evento.estado == "Activo"){
+         this.eventoEnJuego = true;
+       }
       }
     });
     this.cartonService.obtenerCartones(id).subscribe(val=>{
@@ -35,6 +36,10 @@ export class JugarComponent implements OnInit {
 
   irCompras(){
     this.router.navigateByUrl('/userhome/cartones');
+  }
+
+  jugar(){
+    this.router.navigateByUrl('/juegoPrincipal');
   }
 
 

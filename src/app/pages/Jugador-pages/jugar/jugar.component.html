@@ -3,16 +3,21 @@
     <h3>Bingo!</h3>
   </mat-card-title>
   <div *ngIf="!eventoEnJuego">
-    <app-proximo-evento ></app-proximo-evento>
+    <app-proximo-evento></app-proximo-evento>
     <p class="aviso">
-        Tienes ({{numCartones}}) cartones
+      Tienes ({{numCartones}}) cartones
     </p>
     <p>
       Compra tus cartones para participar en el siguiente sorteo
     </p>
+    <mat-card-actions>
+      <button mat-button class="comprar" (click)="irCompras()"> Comprar cartones</button>
+    </mat-card-actions>
   </div>
 
-  <mat-card-actions>
-    <button mat-button class="comprar" (click)="irCompras()" > Comprar cartones</button>
-  </mat-card-actions>
+  <div *ngIf="eventoEnJuego">
+    <mat-card-actions>
+      <button mat-button class="comprar" (click)="jugar()" > Comenzar a jugar!</button>
+    </mat-card-actions>
+  </div>
 </mat-card>

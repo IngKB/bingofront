@@ -11,8 +11,11 @@
   .mar{
     margin-left: 20px ;
   }
-
+  .tablero{
+    margin-left: 20%;
+    height: 100%;
+  }
   .content mat-card {
-    width: 32%;
+    width: 40%;
      margin: 80px auto;
   }

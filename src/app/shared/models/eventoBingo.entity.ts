@@ -2,7 +2,7 @@ import { PartidoBingo } from "./partidaBingo.entity";
 
 export class EventoBingo{
   id:number;
-  FechaInicio:Date;
-  Estado:String;
-  Partidas:PartidoBingo[];
+  fechaInicio:Date;
+  estado:String;
+  partidas:PartidoBingo[];
 }
