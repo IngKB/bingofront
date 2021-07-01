@@ -1,0 +1,17 @@
+.carton{
+  display: inline-block;
+  margin: 20px;
+}
+
+.miscartones{
+  border-radius: 20px;
+  background-color:rgba(198, 182, 255, 0.589);
+}
+
+.carton a{
+  margin-left: 80px;
+  text-align: center;
+  font-size: large;
+  font-weight: 700;
+  color: rgb(21, 21, 182);
+}

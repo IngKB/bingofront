@@ -8,6 +8,7 @@ import { CartonesComponent } from "./pages/Jugador-pages/cartones/cartones.compo
 import { HomeJugadorComponent } from "./pages/Jugador-pages/home-jugador/home-jugador.component";
 import { JuegoPrincipalComponent } from "./pages/Jugador-pages/juego-principal/juego-principal.component";
 import { JugarComponent } from "./pages/Jugador-pages/jugar/jugar.component";
+import { MisCartonesComponent } from "./pages/Jugador-pages/mis-cartones/mis-cartones.component";
 
 const routes: Routes = [
   {
@@ -25,6 +26,10 @@ const routes: Routes = [
       {
         path: "cartones",
         component: CartonesComponent,
+      },
+      {
+        path: "miscartones",
+        component: MisCartonesComponent,
       },
       {
         path: "",

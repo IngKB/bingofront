@@ -5,7 +5,7 @@
   <div *ngIf="!eventoEnJuego">
     <app-proximo-evento ></app-proximo-evento>
     <p class="aviso">
-        Tienes (0) cartones
+        Tienes ({{numCartones}}) cartones
     </p>
     <p>
       Compra tus cartones para participar en el siguiente sorteo
@@ -13,6 +13,6 @@
   </div>
 
   <mat-card-actions>
-    <button mat-button class="comprar"> Comprar cartones</button>
+    <button mat-button class="comprar" (click)="irCompras()" > Comprar cartones</button>
   </mat-card-actions>
 </mat-card>

@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-title>
+    <h4>Cartones comprados</h4>
+  </mat-card-title>
+  <mat-card-content>
+
+    <div class="miscartones">
+      <div class="carton">
+        <button mat-raised-button color="primary" (click)="mostrarAnteriores()">
+          <</button>
+      </div>
+      <div class="carton">
+        <a>{{numeroActual+1}}</a>
+        <app-cartontemplate #carton1></app-cartontemplate>
+      </div>
+      <div class="carton">
+        <a>{{numeroActual+2}}</a>
+        <app-cartontemplate #carton2></app-cartontemplate>
+      </div>
+      <div class="carton">
+        <a>{{numeroActual+3}}</a>
+        <app-cartontemplate #carton3></app-cartontemplate>
+      </div>
+      <div class="carton">
+        <button mat-raised-button color="primary" (click)="mostrarSiguientes()">></button>
+      </div>
+    </div>
+
+  </mat-card-content>
+
+</mat-card>

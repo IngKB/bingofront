@@ -16,10 +16,10 @@ export class RegisterDialogComponent {
 
   userForm = new FormGroup({
     identificacion : new FormControl('', [Validators.required,Validators.pattern("^[0-9]*$")]),
-    primer_nombre : new FormControl('', Validators.required),
-    segundo_nombre: new FormControl('',),
-    primer_apellido: new FormControl('',Validators.required),
-    segundo_apellido: new FormControl(''),
+    primer_Nombre : new FormControl('', Validators.required),
+    segundo_Nombre: new FormControl('',),
+    primer_Apellido: new FormControl('',Validators.required),
+    segundo_Apellido: new FormControl(''),
     telefono: new FormControl('', [Validators.required,Validators.pattern("^[0-9]*$")]),
     correo:new FormControl('', [Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]),
     password: new FormControl('',[Validators.minLength(6)]),
@@ -43,7 +43,7 @@ export class RegisterDialogComponent {
       username:this.userForm.get('correo').value,
       password:this.userForm.get('password').value
     };
-
+    console.log(jugador);
     this.jugadorService.create(jugador,user).subscribe(value=>{
       if(value.estado==0){
         this.loginService.saveUser(jugador);

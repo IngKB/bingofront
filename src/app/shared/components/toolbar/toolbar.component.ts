@@ -47,6 +47,8 @@ export class ToolbarComponent implements OnInit {
     this.name = this.loginService.getItem('Nombre');
     if(this.name != null){
       this.logged = true;
+    }else{
+      this.name = '';
     }
   }
 
