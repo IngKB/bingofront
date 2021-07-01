@@ -1,7 +1,7 @@
 <mat-toolbar>
   <p class="logo" routerLink="home">BingoStar</p>
   <div class="filler"></div>
-  <div *ngIf="!logged">
+  <div *ngIf="!logged && !admin">
     <span class="letrasBlancas" (click)="openDialogRegister()" id="btnRegistrarse">
       Registrarse</span>
     <button mat-raised-button (click)="openDialogLogin()" id="btnLogin">

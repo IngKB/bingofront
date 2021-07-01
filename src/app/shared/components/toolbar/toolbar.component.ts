@@ -13,6 +13,7 @@ import { LoginService } from 'src/app/services/login.service';
 export class ToolbarComponent implements OnInit {
 
   logged:boolean;
+  admin:boolean;
   name:string;
   constructor(public dialog: MatDialog,
     private loginService:LoginService,
@@ -21,6 +22,9 @@ export class ToolbarComponent implements OnInit {
   ngOnInit() {
     this.logged=false;
     this.checkisLogged();
+    if(this.router.url.includes('admin')){
+      this.admin = true;
+    }
   }
 
   openDialogRegister(){
