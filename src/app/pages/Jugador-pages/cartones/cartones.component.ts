@@ -5,6 +5,7 @@ import { EventoBingoService } from 'src/app/services/evento-bingo.service';
 import { LoginService } from 'src/app/services/login.service';
 import { CartontemplateComponent } from 'src/app/shared/components/cartontemplate/cartontemplate.component';
 import { Carton } from 'src/app/shared/models/carton.Entity';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-cartones',
