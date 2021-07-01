@@ -16,9 +16,9 @@ export class ProximoEventoComponent implements OnInit {
 
   ngOnInit() {
     this.evento = new EventoBingo();
-    this.evento.FechaInicio = new Date(2021,6);
-    this.fecha = this.evento.FechaInicio;
-    this.evento.Estado = "Activo";
+    this.evento.fechaInicio = new Date(2021,6);
+    this.fecha = this.evento.fechaInicio;
+    this.evento.estado = "Activo";
 
     this.weekday[0] = "Domingo";
     this.weekday[1] = "Lunes";

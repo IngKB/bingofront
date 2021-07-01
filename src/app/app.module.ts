@@ -25,6 +25,7 @@ import { AdminHomeComponent } from './pages/Admin-pages/admin-home/admin-home.co
 import { AdminJuegoComponent } from './pages/Admin-pages/admin-juego/admin-juego.component';
 import { TableroComponent } from './shared/components/tablero/tablero.component';
 import { MisCartonesComponent } from './pages/Jugador-pages/mis-cartones/mis-cartones.component';
+import { ConfirmarDialogComponent } from './pages/Jugador-pages/confirmar-dialog/confirmar-dialog.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { MisCartonesComponent } from './pages/Jugador-pages/mis-cartones/mis-car
     AdminJuegoComponent,
     TableroComponent,
     MisCartonesComponent,
+    ConfirmarDialogComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -56,8 +58,9 @@ import { MisCartonesComponent } from './pages/Jugador-pages/mis-cartones/mis-car
     BrowserAnimationsModule,
     ReactiveFormsModule
   ],
+  
   providers: [],
-  entryComponents: [RegisterDialogComponent, LoginDialogComponent],
+  entryComponents: [RegisterDialogComponent, LoginDialogComponent,ConfirmarDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
